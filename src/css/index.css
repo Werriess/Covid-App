@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgb(5, 28, 46);
+  padding: 3rem;
+  box-shadow: 0 4px 5px rgba(1, 1, 1, 1);
+  position: relative;
+  z-index: 10;
+}
+
+.nav-item {
+  display: flex;
+  float: right;
+
+}
+
+.nav-item li {
+  list-style: none;
+  padding-left: 2rem;;
+}
+
+.nav-item li a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
