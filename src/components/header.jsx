@@ -1,5 +1,6 @@
 import "../css/index.css";
-import Nav from "../components/nav"
+import Nav from "../components/nav";
+import "../assets/virus-svgrepo-com.svg"
 
 function Header() {
   return <div>

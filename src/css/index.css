@@ -1,12 +1,17 @@
+* {
+  font-family: monospace;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 .header {
-  background-color: rgb(5, 28, 46);
-  padding: 3rem;
+  background-color: rgb(9, 45, 71);
+  padding: 4rem;
   box-shadow: 0 4px 5px rgba(1, 1, 1, 1);
+  font-size: large;
   position: relative;
   z-index: 10;
 }
@@ -27,3 +32,57 @@ body {
   color: #ffffff;
 }
 
+.stats-main {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5rem;
+  width: 100%;
+}
+
+.stats-buttons-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-buttons-div {
+  padding-bottom: 5rem;
+
+}
+
+.buttons {
+  padding: 4rem;
+  width: 15rem;
+  background-color: rgb(9, 45, 71);
+  color: white;
+  border-radius: 1rem;
+}
+
+.buttons:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.stats-blocks {
+  background-color: #dfdfdf;
+  width: 65rem;
+  height: 36rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgb(9, 45, 71);
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
