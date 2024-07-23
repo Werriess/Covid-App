@@ -1,3 +1,5 @@
+import World from "../components/world"
+
 const Nav = () => {
     return (
         <nav>

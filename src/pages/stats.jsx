@@ -3,19 +3,10 @@ import Header from "../components/header";
 import Card from "../components/cards";
 import "../css/index.css";
 
-const url = "https://covid-193.p.rapidapi.com/statistics";
-const options = {
-  method: "GET",
-  headers: {
-    "x-rapidapi-key": "66129a222fmshcb15fef642d1503p1e94f9jsn5608c8044300",
-    "x-rapidapi-host": "covid-193.p.rapidapi.com",
-  },
-};
-
 async function getData(setData, setLoading) {
   setLoading(true);
   try {
-    const response = await fetch(url, options);
+    const response = await fetch('http://localhost:5000/api/data');
     const result = await response.json();
     console.log(result);
 
@@ -40,7 +31,6 @@ function Stats() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [searchButton, setSearchButton] = useState(false);
-
 
   useEffect(() => {
     if (data) {
@@ -68,7 +58,7 @@ function Stats() {
         <div className="stats-buttons-block">
           <Card prop={{ name: "World Map" }} />
           <Card prop={{ name: "Heat Map" }} />
-          <Card prop={{ name: "Show statistics" }} onClick={handleShowStats} />
+          <Card prop={{ name: "Show statistics"}} onClick= {handleShowStats} />
         </div>
         <div className="stats-blocks">
           {searchButton && (

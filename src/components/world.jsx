@@ -9,7 +9,7 @@ const World = () => {
 
   useEffect(() => {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff);
+    scene.background = new THREE.Color(0x092e49);
 
     camera = new THREE.PerspectiveCamera(
       75,
@@ -20,30 +20,30 @@ const World = () => {
     camera.position.z = 50;
 
     renderer = new THREE.WebGLRenderer();
-    renderer.setSize(1400, 400);
+    renderer.setSize(350, 127);
     mountRef.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(27, 40, 20);
+    const geometry = new THREE.SphereGeometry(27, 30, 20);
     const material = new THREE.MeshBasicMaterial({ color: 0xB22222, wireframe: true });
     sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
-    sphere.position.set(3, 0, 0);
+    sphere.position.set(4.5, 0, 0);
 
-    controls = new OrbitControls(camera, renderer.domElement);
-    controls.update();
+    // controls = new OrbitControls(camera, renderer.domElement);
+    // controls.update();
 
     const animate = () => {
       sphere.rotation.x += 0.01;
       sphere.rotation.y += 0.01;
-      controls.update();
+      // controls.update();
       renderer.render(scene, camera);
     };
 
     renderer.setAnimationLoop(animate);
 
     const handleResize = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const width = 350;
+      const height = 127;
 
       camera.aspect = width / height;
       camera.updateProjectionMatrix();

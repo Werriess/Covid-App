@@ -38,6 +38,7 @@ body {
   padding-top: 5rem;
   width: 100%;
   background-color: rgb(203, 203, 207);
+  background-image: url();
 }
 
 .stats-buttons-block {
@@ -53,7 +54,7 @@ body {
 .buttons {
   padding: 4rem;
   width: 15rem;
-  background-color: rgb(9, 45, 71);
+  background-color: #092e49;
   color: white;
   border-radius: 1rem;
 }
@@ -82,6 +83,7 @@ body {
   animation: spin 2s linear infinite;
   margin: auto;
 }
+
 
 th, td {
   border: 1px solid black;
