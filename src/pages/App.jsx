@@ -15,6 +15,9 @@ function App() {
               <div>
                 <Header />
                 <World />
+                <div className="name">
+                  <h1 className="toets">CoronaTracker</h1>
+                </div>
               </div>
             }
           />

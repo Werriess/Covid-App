@@ -1,5 +1,5 @@
-import requests
-import pandas as pd
+import requests # type: ignore
+import pandas as pd # type: ignore
 
 url = 'https://covid-193.p.rapidapi.com/statistics'
 headers = {
@@ -10,5 +10,17 @@ headers = {
 response = requests.get(url, headers=headers)
 data = response.json()
 
-print(data)
+myData = []
+
+for items in data['response']:
+     country_data = {
+            'continent': items.get('continent'),
+            'country': items.get('country'),
+            'total_cases': items.get('cases', {}).get('total')
+     }
+     myData.append(country_data)
+     
+     df = pd.DataFrame(myData)     
+
+print(df)
 

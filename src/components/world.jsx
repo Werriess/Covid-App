@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import "../css/index.css"
 
 const World = () => {
   const mountRef = useRef(null);
@@ -16,17 +17,17 @@ const World = () => {
       0.1,
       1000
     );
-    camera.position.z = 60;
+    camera.position.z = 50;
 
     renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(1400, 400);
     mountRef.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(25, 32, 16);
+    const geometry = new THREE.SphereGeometry(27, 40, 20);
     const material = new THREE.MeshBasicMaterial({ color: 0xB22222, wireframe: true });
     sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
-    sphere.position.set(0, 10, 0);
+    sphere.position.set(3, 0, 0);
 
     controls = new OrbitControls(camera, renderer.domElement);
     controls.update();

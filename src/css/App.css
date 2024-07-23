@@ -2,3 +2,34 @@
   display: flex;
   justify-content: space-between;
 }
+
+.toets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 2s ease-in-out forwards;
+  padding: 4rem;
+  margin: 0;
+  width: 20rem;
+  border-radius: 5rem;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    background-color: rgb(9, 45, 71);
+    color: white;
+    margin-top: 4rem;
+    padding: 2rem;
+  }
+}
